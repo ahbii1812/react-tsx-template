@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-const LanguageList = ["中文", "English"];
+const LanguageList = ["English", "中文"];
 
 export default function LanguageButton() {
   const { i18n } = useTranslation();
@@ -17,6 +17,7 @@ export default function LanguageButton() {
     if (localStorage.getItem("SelectedLanguage") === "en_US") {
       return "English";
     }
+    return "English";
   };
 
   const [language, setLanguage] = useState(getLanguageName());
